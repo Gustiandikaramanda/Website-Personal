@@ -1,0 +1,107 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+}
+span.colored {
+    color: var(--color-one);
+}
+.blog .posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.blog .posts-container .post-item {
+    color: var(--color-two);
+    margin-bottom: 30px;
+}
+.blog .posts-container .post-item .img-container {
+    overflow: hidden;
+    height: 300px;
+    margin-bottom: 20px;
+}
+.blog .posts-container .post-item img {
+    width: 100%;
+    margin-bottom: 10px;
+    transition: .6s;
+}
+.blog .posts-container .post-item:hover img {
+    transform: scale(1.2,1.2);
+}
+.blog .posts-container .post-item:hover h3 {
+    color: var(--color-one);
+}
+.blog .posts-container .post-item .info .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.blog .posts-container .post-item .info .container .categories {
+    margin: 10px 0;
+}
+.blog .posts-container .post-item .info .container .categories span {
+    padding: 10px 15px;
+    background-color: var(--color-one);
+    border-radius: 10px;
+}
+.blog .posts-container .post-item .info .container .date {
+    opacity: .8;
+}
+.blog .posts-container .post-item .info h3 {
+    margin: 20px 0 5px;
+    transition: .6s;
+}
+.blog .posts-container .post-item .info p {
+    opacity: .8;
+    line-height: 1.4em;
+}
+
+@media (max-width: 576px) {
+    .blog .posts-container .post-item .img-container {
+        height: 250px;
+    }
+    .blog .posts-container .post-item img {
+        height: 250px;
+    }
+}
+@media (min-width: 576px) {
+    .blog .posts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .blog .posts-container .post-item .img-container {
+        height: 350px;
+    }
+    .blog .posts-container .post-item img {
+        height: 350px;
+    }
+    .blog .posts-container .post-item {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .blog .posts-container .post-item .img-container {
+        height: 250px;
+    }
+    .blog .posts-container .post-item img {
+        height: 250px;
+    }
+    .blog .posts-container {
+        flex-direction: row;
+        align-items: normal;
+    }
+    .blog .posts-container .post-item {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .blog .posts-container .post-item img {
+        height: 300px;
+    }
+    .blog .posts-container .post-item .img-container {
+        height: 300px;
+    }
+}

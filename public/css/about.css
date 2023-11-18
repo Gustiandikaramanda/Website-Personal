@@ -1,0 +1,340 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+}
+span.colored {
+    color: var(--color-one);
+}
+.about .about-me {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.about .about-me::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 10px solid var(--color-one);
+}
+.about .about-me div h2 {
+    width: 70%;
+    margin-bottom: 30px;
+}
+.about .about-me div a {
+    color: var(--color-two);
+    background-color: var(--color-one);
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.about .about-me p {
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+    margin-left: 30px;
+}
+.about .bar {
+    background-color: var(--bg-color-one);
+    width: 80%;
+    height: 2px;
+    margin-top: 100px;
+}
+.about .experience-and-education {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.about .head {
+    display: flex;
+}
+.about .head p {
+    line-height: 1.4em;
+    opacity: .9;
+}  
+.about .experience-and-education .experience-and-education-container {
+    display: flex;
+    margin-top: 20px;
+}
+.about .experience-and-education .experience-and-education-container .experience 
+,.about .experience-and-education .experience-and-education-container .education {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 20px;
+}
+.about .experience-and-education .experience-and-education-container .experience::before
+,.about .experience-and-education .experience-and-education-container .education::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-one);
+    width: 2px;
+    height: 100%;
+    left: 0;
+}
+.about .experience-and-education .experience-and-education-container .ex-ed-item {
+    display: flex;
+    margin-bottom: 20PX;
+    position: relative;
+}
+.about .experience-and-education .experience-and-education-container .ex-ed-item::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-two);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--color-one);
+    left: -30px;
+    top: 10px;
+}
+.about .experience-and-education .experience-and-education-container .ex-ed-item i {
+    margin-right: 20px;
+    background-color: var(--color-one);
+    border-radius: 50%;
+    height: fit-content;
+    padding: 15px;
+    font-size: 18px;
+}
+.about .experience-and-education .experience-and-education-container .ex-ed-item div h3 {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .experience-and-education .experience-and-education-container .ex-ed-item div h3 span {
+    background-color: var(--color-one);
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-right: 30px;
+}
+.about .experience-and-education .experience-and-education-container .ex-ed-item div p {
+    width: 85%;
+    opacity: .8;
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+.about .experience-and-education .experience-and-education-container .ex-ed-item div .year {
+    color: var(--color-one);
+    position: relative;
+    padding-left: 20px;
+}
+.about .experience-and-education .experience-and-education-container .ex-ed-item div .year::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-one);
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 25%;
+}
+.about .skills {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.about .skills .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.about .skills .skills-container .skill-item {
+    display: flex;
+    flex-direction: column;
+}
+.about .skills .skills-container .skill-item .prog {
+    background-color: #374151;
+    position: relative;
+    height: 8px;
+}
+.about .skills .skills-container .skill-item .prog .fill {
+    background-color: var(--color-one);
+    height: 8px;
+    display: block;
+}
+.about .skills .skills-container .skill-item .prog .percentage {
+    position: absolute;
+    top: -40px;
+    background-color: var(--color-one);
+    padding: 5px;
+}
+.about .skills .skills-container .skill-item .prog .percentage::before {
+    content: '';
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--color-one) transparent transparent transparent ;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 2px;
+    bottom: -10px;
+}
+
+@media (max-width: 576px) {
+    .about .about-me::after {
+        display: none;
+    }
+    .about .about-me p {
+        display: none;
+    }
+    .about .about-me div h2 {
+        width: 100%;
+        text-align: center;
+    }
+    .about .about-me div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .experience-and-education .experience-and-education-container {
+        align-items: center;
+        flex-direction: column;
+    }
+    .about .experience-and-education .experience-and-education-container .experience {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    .about .experience-and-education .experience-and-education-container .education {
+        width: 100%;
+    }
+    .about .skills .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .skills .skills-container .skill-item {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .about .head {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .head h2 {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .about .head p {
+        width: 100%;
+        text-align: center;
+    }
+    .about .bar {
+        margin-top: 50px;
+    }
+}
+@media (min-width: 576px) {
+    .about .about-me::after {
+        right: 15%;
+        width: 60px;
+        height: 60px;
+        top: 30%;
+    }
+    .about .experience-and-education .experience-and-education-container {
+        align-items: center;
+        flex-direction: column;
+    }
+    .about .experience-and-education .experience-and-education-container .experience {
+        margin-bottom: 50px;
+        width: 80%;
+    }
+    .about .experience-and-education .experience-and-education-container .education {
+        width: 80%;
+    }
+    .about .skills .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .skills .skills-container .skill-item {
+        margin-bottom: 40px;
+        width: 80%;
+    }
+    .about .head {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .head h2 {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .about .head p {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .about .about-me::after {
+        right: 10%;
+        width: 70px;
+        height: 70px;
+        top: 39%;
+    }
+    .about .about-me div h2 {
+        font-size: 30px;
+    }
+    .about .about-me p span {
+        font-size: 50px;
+    }
+    .about .head h2 {
+        font-size: 30px;
+        width: 60%;
+        margin-bottom: 0;
+    }
+    .about .about-me {
+        justify-content: space-around;
+    }
+    .about .experience-and-education .experience-and-education-container {
+        align-items: normal;
+        flex-direction: row;
+    }
+    .about .experience-and-education .experience-and-education-container .experience, .about .experience-and-education .experience-and-education-container .education {
+        margin-bottom: 0;
+        width: 50%;
+    }
+    .about .skills .skills-container {
+        flex-direction: row;
+        align-items: normal;
+    }
+    .about .skills .skills-container .skill-item {
+        margin-bottom: 30px;
+        width: 45%;
+    }
+    .about .head {
+        flex-direction: row;
+        align-items: normal;
+    }
+    .about .head p {
+        width: 40%;
+    }
+}
+
+@media (min-width: 992px) {
+    .about .about-me {
+        justify-content: normal;
+    }
+    .about .about-me::after {
+        right: 13%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about .about-me::after {
+        width: 80px;
+        height: 80px;
+        right: 21%;
+    }
+    .about .about-me div h2 {
+        font-size: 35px;
+    }
+    .about .about-me p span {
+        font-size: 60px;
+    }
+    .about .head h2 {
+        font-size: 35px;
+    }
+}

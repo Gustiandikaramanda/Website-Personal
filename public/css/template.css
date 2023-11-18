@@ -1,0 +1,207 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color-one);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-one);
+    border-radius: 10px;
+}
+/* End Global Rules */
+/* Start Variables */
+:root {
+    --color-one: #EE5F38;
+    --color-two: #FFF;
+    --bg-color-one: #000;
+    --bg-color-two: #212428;
+}
+/* End Variables */
+/* Start Body */
+body {
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+/* End Body */
+/* Start Navbar */
+nav {
+    background-color: var(--bg-color-one);
+    display: flex;
+    transition: .6s;
+    position: relative;
+}
+nav a {
+    color: var(--color-two);
+    transition: .6s;
+}
+nav a:hover {
+    color: var(--color-one);
+}
+nav a.selected {
+    color: var(--color-one);
+}
+nav a i {
+    margin-right: 10px;
+}
+nav div {
+    color: var(--color-two);
+    margin-top: 20px;
+    padding-right: 20px;
+    line-height: 1.4em;
+}
+nav div span {
+    color: var(--color-one);
+}
+/* End Navbar */
+/* Start Main */
+main {
+    width: 80%;
+    height: 100%;
+    background-color: var(--bg-color-two);
+    color: var(--color-two);
+    padding: 100px 0;
+    overflow-y: scroll;
+    transition: .6s;
+    position: relative;
+}
+main h1 {
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 50px;
+}
+main h1::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-one);
+    height: 5px;
+    width: 40%;
+    bottom: -5px;
+    left: 0;
+}
+main .menuBtn {
+    font-size: 25px;
+    color: var(--color-two);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+/* End Main */
+@media (max-width: 576px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        width: 100%;
+        height: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        overflow: hidden;
+    }
+    nav a {
+        margin-bottom: 0;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav div {
+        display: none;
+    }
+    main {
+        width: 100%;
+        height: 100%;
+    }
+    main .menuBtn {
+        display: block;
+    }
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+}
+@media (min-width: 576px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        width: 100%;
+        height: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+    }
+    nav a {
+        margin-bottom: 0;
+        font-size: 15px;
+    }
+    nav div {
+        display: none;
+    }
+    main {
+        width: 100%;
+        height: 100%;
+    }
+    main .menuBtn {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    main .menuBtn {
+        display: none;
+    }
+    nav {
+        height: 10%;
+        padding: 20px;
+    }
+    main {
+        height: 90%;
+    }
+    nav a {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        flex-direction: row;
+    }
+    nav {
+        width: 20%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    nav a {
+        margin-bottom: 15px;
+    }
+    nav div {
+        display: block;
+    }
+    main {
+        width: 80%;
+        height: 100%;
+    }
+    
+}
